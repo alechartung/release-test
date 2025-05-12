@@ -6,6 +6,6 @@ on:
 jobs:
   prerelease:
     runs-on: ubuntu-latest
-    if: github.event.release.prerelease
+    if: github.event.release.prerelease && !github.event.release.draft
     steps:
       - run: echo "Prerelease"
