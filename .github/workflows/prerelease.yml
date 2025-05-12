@@ -1,0 +1,12 @@
+on:
+  release:
+    types:
+      - prereleased
+      - published
+
+jobs:
+  prerelease:
+    if: github.event.release.prerelease
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Prerelease"
